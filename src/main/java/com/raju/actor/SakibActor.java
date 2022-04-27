@@ -10,17 +10,20 @@ public class SakibActor extends AbstractActor {
     private final LoggingAdapter log = Logging.getLogger(getContext().getSystem(), this);
     private String text;
 
+    public SakibActor(String text) {
+        this.text = text;
+    }
 
     @Override
     public void preStart() throws Exception {
         super.preStart();
-        log.info("Actor started");
+        log.info("Sakib Actor started");
     }
 
     @Override
     public void postStop() throws Exception {
         super.postStop();
-        log.info("Actor stopped");
+        log.info("Sakib Actor stopped");
     }
 
     public static Props props(String text) {
